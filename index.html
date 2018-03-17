@@ -107,7 +107,6 @@
         <h2 class="visually-hidden">Карта</h2>
       </section>
 
-
     </main>
 
 <!-- Footer -->
@@ -126,11 +125,34 @@
         <a class="html-academy-logo" href="https://htmlacademy.ru">
         </a>
       </p>
+
     </footer>
 
     <section class="modal modal-search">
-      <!-- Здесь будет форма -->
+
+      <form class="hotelsearch-form" action="https://echo.htmlacademy.ru" method="post">
+          <p class="hotelsearch-item">
+            <label for="hotelsearch-datein">Дата заезда</label>
+            <input id="hotelsearch-datein" type="text" name="datein" value="" placeholder="24 апреля 2017">
+          </p>
+          <p class="hotelsearch-item">
+            <label for="hotelsearch-dateout">Дата выезда</label>
+            <input id="hotelsearch-dateout" type="text" name="dateout" value="" placeholder="4 июля 2017">
+          </p>
+          <p class="hotelsearch-item">
+            <label for="hotelsearch-adult">Взрослые</label>
+            <input id="hotelsearch-adult" type="number" name="adult" value="2" min="1" max="5" step="1">
+          </p>
+          <p class="hotelsearch-item">
+            <label for="hotelsearch-kids">Дети</label>
+            <input id="hotelsearch-kids" type="number" name="kids" value="0" min="0" max="5" step="1">
+          </p>
+          <button class="button" type="submit">Найти</button>
+        </form>
+
     </section>
+
+
 
   </body>
 </html>

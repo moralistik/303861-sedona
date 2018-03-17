@@ -26,10 +26,66 @@
 
     <main class="container">
       <h1 class="visually-hidden">Поиск отелей в Седоне</h1>
+
+<!-- Фильтр отелей -->
+
       <section class="filters">
         <h2 class="visually-hidden">Фильтр отелей</h2>
-        <!-- Здесь будет форма -->
+
+        <form class="hotelsearch-filter" method="get" action="https://echo.htmlacademy.ru">
+
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li class="hotelsearch-filter-option">
+                <input class="visually-hidden hotelsearch-filter-input hotelsearch-filter-input-checkbox" type="checkbox" name="swimming-pool" id="hotelsearch-filter-swimming-pool" checked>
+                <label for="hhotelsearch-filter-swimming-pool">Бассейн</label>
+              </li>
+              <li class="hotelsearch-filter-option">
+                <input class="visually-hidden hotelsearch-filter-input hotelsearch-filter-input-checkbox" type="checkbox" name="parking" id="hotelsearch-filter-parking">
+                <label for="hotelsearch-filter-parking">Парковка</label>
+              </li>
+              <li class="hotelsearch-filter-option">
+                <input class="visually-hidden hotelsearch-filter-input hotelsearch-filter-input-checkbox" type="checkbox" name="wi-fi" id="hotelsearch-filter-wi-fi">
+                <label for="hotelsearch-filter-wi-fi">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <ul>
+              <li class="hotelsearch-filter-option">
+                <input class="visually-hidden hotelsearch-filter-input hotelsearch-filter-input-checkbox" type="checkbox" name="hotel" id="hotelsearch-filter-hotel" checked>
+                <label for="hotelsearch-filter-hotel">Гостиница</label>
+              </li>
+              <li class="hotelsearch-filter-option">
+                <input class="visually-hidden hotelsearch-filter-input hotelsearch-filter-input-checkbox" type="checkbox" name="motel" id="hotelsearch-filter-motel" checked>
+                <label for="hotelsearch-filter-motel">Мотель</label>
+              </li>
+              <li class="hotelsearch-filter-option">
+                <input class="visually-hidden hotelsearch-filter-input hotelsearch-filter-input-checkbox" type="checkbox" name="apartments" id="hotelsearch-filter-apartments" checked>
+                <label for="hotelsearch-filter-apartments">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset>
+            <legend>Стоимость в сутки:</legend>
+            <div class="moneycount-show">
+              <p>От 0</p>
+              <p>До 3000</p>
+            </div>
+            <input type="range" id="moneycount" name="moneycount" min="0" max="5000" step="100">
+          </fieldset>
+
+          <button type="submit" class="filter-button button">Показать</button>
+
+        </form>
+
       </section>
+
+<!-- Сортировка результатов -->
 
       <section class="hotels">
 
@@ -37,7 +93,15 @@
 
         <section class="filters-items">
           <h3 class="visually-hidden">Сортировка результатов поиска отелей</h3>
-          <!-- Здесь будет форма -->
+          <p> Найдено: <span>3</span></p>
+          <p> Сортировка: </p>
+          <p><a href="#">По цене</a></p>
+          <p><a href="#">По типу</a></p>
+          <p><a href="#">По рейтингу</a></p>
+          <p>
+            <a class="arrow arrow-up" href="#">по возрастанию</a>
+            <a class="arrow arrow-down" href="#">по убыванию</a>
+          </p>
         </section>
 
 
@@ -46,16 +110,14 @@
 <!-- Первый отель -->
 
           <li class="hotels-item">
-            <h4 class"hotels-item-name">
-              <a href="hotels-item.html">
+            <a href="hotel-1.html">
+              <h4 class"hotels-item-name">
                 Amara Resort &amp Spa
-              </a>
-            </h4>
-            <p class="hotels-item-image">
-              <a href="hotels-item.html">
+              </h4>
+              <p class="hotels-item-image">
                 <img src="img/hotel-1.jpg" width="135" height="90" alt="Отель «Amara Resort & Spa»">
-              </a>
-            </p>
+              </p>
+            </a>
             <p>
               <span class="hotels-category">Гостиница</span>
               <a class="button-blue" href="#">Подробнее</a>
@@ -73,16 +135,14 @@
 <!-- Второй отель -->
 
           <li class="hotels-item">
-            <h4 class"hotels-item-name">
-              <a href="hotels-item.html">
+            <a href="hotel-2.html">
+              <h4 class"hotels-item-name">
                 Desert Quail Inn
-              </a>
-            </h4>
+              </h4>
             <p class="hotels-item-image">
-              <a href="hotels-item.html">
                 <img src="img/hotel-2.jpg" width="135" height="90" alt="Отель «Desert Quail Inn»">
-              </a>
             </p>
+            </a>
             <p>
               <span class="hotels-category">Мотель</span>
               <a class="button-blue" href="#">Подробнее</a>
@@ -100,16 +160,14 @@
 <!-- Третий отель -->
 
           <li class="hotels-item">
-            <h4 class"hotels-item-name">
-              <a href="hotels-item.html">
+            <a href="hotel-3.html">
+              <h4 class"hotels-item-name">
                 Villas at Poco Diablo
-              </a>
-            </h4>
+              </h4>
             <p class="hotels-item-image">
-              <a href="hotels-item.html">
-                <img src="img/hotel-3.jpg" width="135" height="90" alt="Отель «Villas at Poco Diablo»">
-              </a>
+              <img src="img/hotel-3.jpg" width="135" height="90" alt="Отель «Villas at Poco Diablo»">
             </p>
+            </a>
             <p>
               <span class="hotels-category">Аппартаменты</span>
               <a class="button-blue" href="#">Подробнее</a>
